@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Question</title>
+	<script type="text/javascript" src="SurveyInfo.js"></script>
+</head>
+<body>
+	<h1><center>Add a Question to the Survey</center></h1>
+	<form>
+		<input type="text" name="qstn" placeholder="Add Question">
+		<input type="text" name="answer" placeholder="Add Answer">
+		<button onclick="add(qstn,answer)">Add</button>
+	</form>
+	<script>
+		function add(a,b){
+			SurveyInfo.addQuestion(a);
+			SurveyInfo.addAnswer(b);
+		}
+
+		SurveyInfo.prntQuestions();
+		SurveyInfo.prntAnswers();
+	</script>
+</body>
+</html>

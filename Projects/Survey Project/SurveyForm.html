@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Assignment 4</title>
+	<script type="text/javascript" src="SurveyInfo.js"></script>
+</head>
+<body>
+	<script>
+		document.write("<h1><center>"+SurveyInfo.getTitle(0)+"<br>");
+	</script>
+	<form action="results.html" method="get">
+		<table>
+			<tr>
+				<td><script>document.write(SurveyInfo.getQuestion(0));</script></td>
+				<td>
+					<input type="radio" name="q1" value="linux">
+					<script>document.write(SurveyInfo.getAnswer(0,0));</script>
+					<input type="radio" name="q1" value="windows">
+					<script>document.write(SurveyInfo.getAnswer(0,1));</script>
+					<input type="radio" name="q1" value="amc">
+					<script>document.write(SurveyInfo.getAnswer(0,2));</script>
+					<input type="radio" name="q1" value="other">
+					<script>document.write(SurveyInfo.getAnswer(0,3));</script>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<script>document.write(SurveyInfo.getQuestion(1));</script>
+				</td>
+				<td>
+					<input type="radio" name="q2" value="Computer Science">
+					<script>document.write(SurveyInfo.getAnswer(1,0));</script>
+					<input type="radio" name="q2" value="Life Science">
+					<script>document.write(SurveyInfo.getAnswer(1,1));</script>
+					<input type="radio" name="q2" value="Social Science">
+					<script>document.write(SurveyInfo.getAnswer(1,2));</script>
+					<input type="radio" name="q2" value="Other">
+					<script>document.write(SurveyInfo.getAnswer(1,3));</script>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<script>document.write(SurveyInfo.getQuestion(2));</script>
+				</td>
+				<td>
+					<input type="radio" name="q3" value="c++">
+					<script>document.write(SurveyInfo.getAnswer(2,0));</script>
+					<input type="radio" name="q3" value="Javascript">
+					<script>document.write(SurveyInfo.getAnswer(2,1));</script>
+					<input type="radio" name="q3" value="Java">
+					<script>document.write(SurveyInfo.getAnswer(2,2));</script>
+					<input type="radio" name="q3" value="Other">
+					<script>document.write(SurveyInfo.getAnswer(2,3));</script>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<script>document.write(SurveyInfo.getQuestion(3));</script>
+				</td>
+				<td>
+					<input type="radio" name="q4" value="Netbeans">
+					<script>document.write(SurveyInfo.getAnswer(3,0));</script>
+					<input type="radio" name="q4" value="Qt">
+					<script>document.write(SurveyInfo.getAnswer(3,1));</script>
+					<input type="radio" name="q4" value="Eclipse">
+					<script>document.write(SurveyInfo.getAnswer(3,2));</script>
+					<input type="radio" name="q4" value="Other">
+					<script>document.write(SurveyInfo.getAnswer(3,3));</script>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<script>document.write(SurveyInfo.getQuestion(4));</script>
+				</td>
+				<td>
+					<input type="radio" name="q5" value="cal state">
+					<script>document.write(SurveyInfo.getAnswer(4,0));</script>
+					<input type="radio" name="q5" value="UC">
+					<script>document.write(SurveyInfo.getAnswer(4,1));</script>
+					<input type="radio" name="q5" value="private">
+					<script>document.write(SurveyInfo.getAnswer(4,2));</script>
+					<input type="radio" name="q5" value="out of state">
+					<script>document.write(SurveyInfo.getAnswer(4,3));</script>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="submit" name="submit">
+				</td>
+				<td>
+						<input type="button" onclick="location.href='addQuestion.html';" value="Add a Question">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

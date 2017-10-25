@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Results Page</title>
+	<script type="text/javascript" src="getForm.js"></script>
+	<script type="text/javascript" src="SurveyClass.js"></script>
+</head>
+<body>
+	<h1><center>Results:</center></h1>
+<script type="text/javascript">
+	var counter=0;
+	var answers=[];
+	var url=document.location.href;
+	$_GET=getForm(url);
+	for(property in $_GET){
+		var str=$_GET[property];
+		var dec=decodeURIComponent(str);
+		var clean=dec.replace(/\++/g,' ');
+		$_GET[property]=clean;
+		counter++;
+		if(clean !== "")answers.push(clean);
+	}
+
+	var a = new Survey(answers);
+	if(localStorage.getItem("Inv")==null){
+		a.constructor();
+	}
+	a.store("Inv");
+	a.display();
+
+	
+
+
+</script>
+</body>
+</html>
